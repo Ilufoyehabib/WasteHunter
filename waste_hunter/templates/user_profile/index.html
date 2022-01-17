@@ -20,12 +20,12 @@
     <!-- the nav is built using bootstrap navbar classes  -->
     <nav class="navbar navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand h1 text-success fw-bold"href="#">WasteHunter</a>
+            <a class="navbar-brand h1 text-success fw-bold" href="{{ url_for('index') }}">WasteHunter</a>
             <ul class="nav nav-pills ">
                 {% if g.user %}
-                <li class="nav-item ">
-                    <a href="{{ url_for('auth.logout') }}" class="nav-link active bg-success">Logout</a>
-                </li>
+<!--                <li class="nav-item ">-->
+<!--                    <a href="{{ url_for('auth.logout') }}" class="nav-link active bg-success">Logout</a>-->
+<!--                </li>-->
                 <div></div>
                 {% else %}
                 <li class="nav-item ">
@@ -34,7 +34,7 @@
                 {% endif %}
             </ul>
         </div>
-        
+
       </nav>
     <div>
         <section class="get-started mb-5 container">
@@ -45,7 +45,7 @@
                 {% endif %}
             </div>
             <img src="{{ url_for('static', filename='10181.jpg') }}" alt="waste vector">
-            
+
         </section>
 
         <!-- second section of landing page  -->
@@ -63,7 +63,7 @@
                     <h5 class="fw-bolder">Report illegal dump sites</h5>
                     <p>Help us keep your environment safe by reporting illegal waste dumps around you and get rewarded</p>
                 </li>
-            </ul>     
+            </ul>
         </section>
 
         <!-- the footer section  -->
